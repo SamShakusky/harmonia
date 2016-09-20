@@ -1,0 +1,21 @@
+@media screen {
+  /*and (min-width: 1360px) */
+  @font-face {
+    font-family: 'Roboto';
+    src: url('https://fonts.googleapis.com/css?family=Roboto:300,400&subset=cyrillic,cyrillic-ext');
+    font-weight: 300;
+	}
+    
+  body {
+    margin: 0;
+    /* Обнуление отступов */
+    padding: 0;
+    background-color: #f2f4f6;
+  }
+
+  .h-content {
+  	font-family: 'Roboto', sans-serif;
+  	font-size: 18px;
+  	color: #505050;
+  	font-weight: 300;
+  }
