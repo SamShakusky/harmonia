@@ -1,10 +1,5 @@
 @media screen {
   /*and (min-width: 1360px) */
-  @font-face {
-    font-family: 'Roboto';
-    src: url('https://fonts.googleapis.com/css?family=Roboto:300,400&subset=cyrillic,cyrillic-ext');
-    font-weight: 300;
-	}
     
   body {
     margin: 0;
