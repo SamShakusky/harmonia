@@ -34,7 +34,7 @@
   }
 
   .h-content {
-   	display: inline-block;
+   	display: flex;
    	margin: 20px 0;
    	margin-left: auto;
    	margin-right: auto;
@@ -43,16 +43,21 @@
   .h-content-row-left {
    	display: inline-block;
    	vertical-align: top;
+	min-width: 60px;
+	text-align: right;
    }
 
    .h-content-input {
    	display: inline-block;
    	vertical-align: top;
+	margin: 0 12px;
    }
 
   .h-content-row-right {
   	display: inline-block;
   	vertical-align: top;
+	min-width: 60px;
+	text-align: left;
   }
 
   .h-content ul {

@@ -5,75 +5,83 @@
 		<title>«Гармония» — числовые ряды для дизайна</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<link rel="stylesheet" href="css/style.css">
   		<link media="screen" rel="stylesheet" href="css/style.css">
   		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400&subset=cyrillic,cyrillic-ext" rel="stylesheet">
 	</head>
 	<body>
-		<div class="h-body">
-			<div class="h-header"> 
-				<div class="h-header-logo">
-						<img src="img/logo-harmonia.svg" alt="Приложение &laquo;Гармония&raquo;">
-				</div>
-				<div class="h-header-set">
-					<div class="h-header-set-ratio">
-						<select size="1">
-							<optgroup label="Пропорция" class="ratio">
-								<option value="1.618">1.618</option>
-								<option value="2.214">2.214</option>
-								<option value="1.414">1.414</option>
-								<option value="1.732">1.732</option>
-								<option value="2.236">2.236</option>
-								<option value="3.142">3.142</option>
-							</optgroup>
-						</select>
+		<main>
+			<div class="h-body">
+				<div class="h-header"> 
+					<div class="h-header-logo">
+							<img src="img/logo-harmonia.svg" alt="Приложение &laquo;Гармония&raquo;">
 					</div>
-					<div class="h-header-set-dmark">
-						<select size="1">
-							<optgroup label="Разделитель" class="divider">
-								<option value="Dot">Точка</option>
-								<option value="Comma">Запятая</option>
-							</optgroup>
-						</select>
-					</div>
-					<div class="h-header-set-rounding">
-						<select size="1">
-							<optgroup label="Округление" class="divider">
-								<option value="Hundredths">≈1.11</option>
-								<option value="Integers">≈1</option>
-							</optgroup>
-						</select>
+					<div class="h-header-set">
+						<div class="h-header-set-ratio">
+							<select class="proportion" size="1">
+								<optgroup label="Пропорция" class="ratio">
+									<option value="1.618">1.618</option>
+									<option value="2.214">2.214</option>
+									<option value="1.414">1.414</option>
+									<option value="1.732">1.732</option>
+									<option value="2.236">2.236</option>
+									<option value="3.142">3.142</option>
+								</optgroup>
+							</select>
+						</div>
+						<div class="h-header-set-dmark">
+							<select size="1">
+								<optgroup label="Разделитель" class="divider">
+									<option value="Dot">Точка</option>
+									<option value="Comma">Запятая</option>
+								</optgroup>
+							</select>
+						</div>
+						<div class="h-header-set-rounding">
+							<select class="round" size="1">
+								<optgroup label="Округление" class="divider">
+									<option value="100">≈1.11</option>
+									<option value="10">≈1.1</option>
+									<option value="1">≈1</option>
+								</optgroup>
+							</select>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="h-content">
-				<div class="h-content-row-left">
-					<ul>
-						<li title="Скопировать в буфер обмена">316.42</li>
-						<li title="Скопировать в буфер обмена">195.63</li>
-						<li title="Скопировать в буфер обмена">120.92</li>
-						<li title="Скопировать в буфер обмена">74.72</li>
-						<li title="Скопировать в буфер обмена">46.18</li>
-						<li title="Скопировать в буфер обмена">28.53</li>
-						<li title="Скопировать в буфер обмена">17.63</li>
-					</ul>
-				</div>
-				<div class="h-content-input">
-					<input type="text" name="rowvalue" value="512" placeholder="Число">
-				</div>
-				<div class="h-content-row-right">
-					<ul>
-						<li title="Скопировать в буфер обмена">828.36</li>
-						<li title="Скопировать в буфер обмена">1 340.29</li>
-						<li title="Скопировать в буфер обмена">2 168.59</li>
-						<li title="Скопировать в буфер обмена">3 508.78</li>
-						<li title="Скопировать в буфер обмена">5 677.21</li>
-						<li title="Скопировать в буфер обмена">9 185.72</li>
-						<li title="Скопировать в буфер обмена">14 862.49</li>
-					</ul>
-				</div>
-		</div>
+			<div class="h-content">
+					<div class="min h-content-row-left">
+						<ul>
+	<!--
+							<li title="Скопировать в буфер обмена">316.42</li>
+							<li title="Скопировать в буфер обмена">195.63</li>
+							<li title="Скопировать в буфер обмена">120.92</li>
+							<li title="Скопировать в буфер обмена">74.72</li>
+							<li title="Скопировать в буфер обмена">46.18</li>
+							<li title="Скопировать в буфер обмена">28.53</li>
+							<li title="Скопировать в буфер обмена">17.63</li>
+	-->
+						</ul>
+					</div>
+					<div class="h-content-input">
+						<input class="input" type="text" name="rowvalue" value="512" placeholder="Число">
+					</div>
+					<div class="max h-content-row-right">
+						<ul>
+	<!--
+							<li title="Скопировать в буфер обмена">828.36</li>
+							<li title="Скопировать в буфер обмена">1 340.29</li>
+							<li title="Скопировать в буфер обмена">2 168.59</li>
+							<li title="Скопировать в буфер обмена">3 508.78</li>
+							<li title="Скопировать в буфер обмена">5 677.21</li>
+							<li title="Скопировать в буфер обмена">9 185.72</li>
+							<li title="Скопировать в буфер обмена">14 862.49</li>
+	-->
+						</ul>
+					</div>
+			</div>
+		</main>
 		<article>
 			<h1>
 				Как &laquo;Гармония&raquo; поможет в&nbsp;дизайне?
@@ -84,5 +92,6 @@
 
 			</p>
 		</article>
+		<script src="app.js"></script>
 	</body>
 </html>
