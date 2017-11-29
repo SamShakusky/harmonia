@@ -1,2 +1,2 @@
 # harmonia
-It's project which help to calculate value of golden proportion
+It's a project which helps calculate the golden ratio
