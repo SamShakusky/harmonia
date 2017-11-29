@@ -32,6 +32,12 @@
   	display: inline-block;
   	text-align: right;
   }
+	
+  .h-header-set-count {
+    display: inline-block;
+  }
+  
+  .h-header-set-count input { min-width: 150px; }
 
   .h-content {
    	display: flex;
@@ -68,8 +74,12 @@
 
   .h-content ul li{
     cursor: pointer;
-    }
-  
+  }
+
+	.range {
+		width: 
+	}
+	
   h1 {
   	 font-family: "Georgia", serif;
   	 font-size: 30px;
