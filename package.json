@@ -1,11 +1,26 @@
 {
-	"name": "node-js-getting-started",
-	"version": "0.2.5",
-	"engines": {
-		"node": "5.9.1"
-	},
-	"main": "index.js",
-	"scripts": {
-    	"start": "node index.js"
-	}
+  "name": "tdl",
+  "version": "1.0.0",
+  "description": "Todo list",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Shakusky@bitbucket.org/marchingband/tdl.git"
+  },
+  "author": "Shakusky",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/marchingband/tdl#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.12",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean-css": "^3.4.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0"
+  },
+  "dependencies": {}
 }
