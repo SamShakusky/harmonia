@@ -8,14 +8,51 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/main.css">
-  		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400&subset=cyrillic,cyrillic-ext" rel="stylesheet">
 	</head>
 	<body>
+		<header>
+			<img src="img/logo-harmonia.svg" alt="Приложение &laquo;Гармония&raquo;">
+		</header>
 		<main>
+			<section class="controls">
+				<div class="selector proportion">
+					<button data-value="1.618" class="active">Golden section<span class="marker"></span></button>
+					<button data-value="2.214">Silver section</button>
+					<button data-value="1.414">Root of two</button>
+					<button data-value="1.732">Root of three</button>
+					<button data-value="2.236">Root of five</button>
+					<button data-value="3.142">Pi</button>
+				</div>
+				
+				<div class="selector devider">
+					<button data-value="." class="active">Dots<span class="marker"></span></button>
+					<button data-value=",">Commas</button>
+				</div>
+				
+				<div class="selector round">
+					<button data-value="2" class="active">Hundredth<span class="marker"></span></button>
+					<button data-value="0">Integers</button>
+				</div>
+			</section>
+			
+			<section class="numbers">
+				<ul class="min">
+				
+				</ul>
+				
+				<input class="input" type="text" value="900">
+				
+				<ul class="max">
+					
+				</ul>
+			</section>
+			
+			<section class="examples"></section>
+<!--
 			<div class="h-body">
 				<div class="h-header"> 
 					<div class="h-header-logo">
-							<img src="img/logo-harmonia.svg" alt="Приложение &laquo;Гармония&raquo;">
+							
 					</div>
 					<div class="h-header-set">
 						<div class="h-header-set-ratio">
@@ -75,6 +112,7 @@
 
 			</p>
 		</article>
+-->
 		<script src="js/app.js"></script>
 	</body>
 </html>
