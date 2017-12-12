@@ -4,13 +4,13 @@ var harmonise = (function() {
 	//cache DOM
 	var $main = $('main'),
 		$input = $main.find('.input'),
-		$proportion = $main.find('.proportion'),
-		$devider = $main.find('.devider'),
-		$round = $main.find('.round'),
+		$proportion = $main.find('.proportion .selector-wrap'),
+		$devider = $main.find('.devider .selector-wrap'),
+		$round = $main.find('.round .selector-wrap'),
 		$count = $main.find('.count'),
 		$maxCol = $main.find('.max'),
 		$minCol = $main.find('.min'),
-		$selectorBtn = $main.find('.selector button');
+		$selectorBtn = $main.find('.selector .selector-wrap button');
 	
 	//bind events
 	$input.on('keyup', count);
@@ -28,16 +28,16 @@ var harmonise = (function() {
 			for(let i=0; i< 12/*$count.val()*/; i++){
 				max *= $proportion.children('.active').data('value');
 				min *= 1/$proportion.children('.active').data('value');
-				$maxCol.append('<li title="Копировать в буфер обмена">'+max.toFixed($round.children('.active').data('value'))+'</li>');
-				$minCol.append('<li title="Копировать в буфер обмена">'+min.toFixed($round.children('.active').data('value'))+'</li>');
+				$maxCol.append('<li title="Копировать в буфер обмена">'+max.toFixed($round.children('.active').data('round'))+'</li>');
+				$minCol.append('<li title="Копировать в буфер обмена">'+min.toFixed($round.children('.active').data('round'))+'</li>');
 			}
 	  		
-			if($devider.val() == "comma") changeDevider();
+			if($devider.children('button.active').data('value') == ",") changeDevider();
 		}
 	}
   
 	function changeDevider() {
-		$main.find('.h-content ul li').each(function(){
+		$main.find('.numbers ul li').each(function(){
 			let changed = $(this).text().replace('.', ',');
 			$(this).text(changed);
 		})
@@ -53,9 +53,5 @@ var harmonise = (function() {
 		$(this).parent().find('.marker')
 			.css('transform','translateX('+ ePosition +'px)')
 			.css('width',eWidth);
-	}
-	
-	return {
-		count: count
 	}
 })();

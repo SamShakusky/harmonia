@@ -16,22 +16,32 @@
 		<main>
 			<section class="controls">
 				<div class="selector proportion">
-					<button data-value="1.618" class="active">Golden section<span class="marker"></span></button>
-					<button data-value="2.214">Silver section</button>
-					<button data-value="1.414">Root of two</button>
-					<button data-value="1.732">Root of three</button>
-					<button data-value="2.236">Root of five</button>
-					<button data-value="3.142">Pi</button>
+					<button class="mobileSelect">1.618</button>
+					<div class="selector-wrap">
+						<button data-value="1.618" class="active">Golden section<span class="marker"></span></button>
+						<button data-value="2.214">Silver section</button>
+						<button data-value="1.414">Root of two</button>
+						<button data-value="1.732">Root of three</button>
+						<button data-value="2.236">Root of five</button>
+						<button data-value="3.142">Pi</button>
+					</div>
 				</div>
 				
 				<div class="selector devider">
-					<button data-value="." class="active">Dots<span class="marker"></span></button>
-					<button data-value=",">Commas</button>
+					<button class="mobileSelect">Dots</button>
+					<div class="selector-wrap">
+						<button data-value="." class="active">Dots<span class="marker"></span></button>
+						<button data-value=",">Commas</button>
+					</div>
 				</div>
 				
 				<div class="selector round">
-					<button data-value="2" class="active">Hundredth<span class="marker"></span></button>
-					<button data-value="0">Integers</button>
+					<button class="mobileSelect">Hundredths</button>
+					<div class="selector-wrap">
+						<button data-round="2" data-value="1,11" class="active">Hundredths<span class="marker"></span></button>
+						<button data-round="1" data-value="1,1">Tenths</button>
+						<button data-round="0" data-value="1">Integers</button>
+					</div>
 				</div>
 			</section>
 			
@@ -40,79 +50,24 @@
 				
 				</ul>
 				
-				<input class="input" type="text" value="900">
+				<input class="input" type="number" value="512">
 				
 				<ul class="max">
 					
 				</ul>
 			</section>
 			
-			<section class="examples"></section>
-<!--
-			<div class="h-body">
-				<div class="h-header"> 
-					<div class="h-header-logo">
-							
-					</div>
-					<div class="h-header-set">
-						<div class="h-header-set-ratio">
-							<select class="proportion" size="1">
-								<optgroup label="Пропорция" class="ratio">
-									<option value="1.618">1.618</option>
-									<option value="2.214">2.214</option>
-									<option value="1.414">1.414</option>
-									<option value="1.732">1.732</option>
-									<option value="2.236">2.236</option>
-									<option value="3.142">3.142</option>
-								</optgroup>
-							</select>
-						</div>
-						<div class="h-header-set-dmark">
-							<select class="devider" size="1">
-								<optgroup label="Разделитель">
-									<option value="dot">Точка</option>
-									<option value="comma">Запятая</option>
-								</optgroup>
-							</select>
-						</div>
-						<div class="h-header-set-rounding">
-							<select class="round" size="1">
-								<optgroup label="Округление">
-									<option value="2">≈1.11</option>
-									<option value="1">≈1.1</option>
-									<option value="0">≈1</option>
-								</optgroup>
-							</select>
-						</div>
-						<div class="h-header-set-count">
-							<input class="count" type="number" placeholder="Количество результатов">
-						</div>
-					</div>
+			<section class="examples">
+				<div class="picture">
+					<img src="/img/dragonfly.png" alt="dragonfly">
 				</div>
-			</div>
-			<div class="h-content">
-					<div class="min h-content-row-left">
-						<ul></ul>
-					</div>
-					<div class="h-content-input">
-						<input class="input" type="text" name="rowvalue" value="512" placeholder="Число">
-					</div>
-					<div class="max h-content-row-right">
-						<ul></ul>
-					</div>
-			</div>
+				<div class="text">
+					<h1>Как «Гармония» поможет в&nbsp;дизайне?</h1>
+					<p>В природе все подчиняется законам гармонии.</p>
+					<p>Эти закономерности мы наблюдаем во всем. Они есть в формах растений, насекомых, человека и его ДНК, планет, и&nbsp;тд. Чаще всего встречается закономерность Фибоначчи: 1, 1, 2, 3, 5, 8, 13, 21, 34, 55... Здесь числа, стоящие рядом стремятся к пропорции 1:1,618. Эту пропорцию принято называть «Золотым сечением».</p>
+				</div>
+			</section>
 		</main>
-		<article>
-			<h1>
-				Как &laquo;Гармония&raquo; поможет в&nbsp;дизайне?
-			</h1>
-			<p>
-				В&nbsp;природе все подчиняется законам гармонии.<br>
-				Эти закономерности мы&nbsp;наблюдаем во&nbsp;всем. Они есть в&nbsp;формах растений, насекомых, человека и&nbsp;его ДНК, планет, и т. д. Чаще всего встречается закономерность Фибоначчи: 1, 1, 2, 3, 5, 8, 13, 21, 34, 55&hellip; Здесь числа, стоящие рядом стремятся к&nbsp;пропорции 1:1,618. Эту пропорцию принято называть &laquo;Золотым сечением&raquo;.
-
-			</p>
-		</article>
--->
 		<script src="js/app.js"></script>
 	</body>
 </html>

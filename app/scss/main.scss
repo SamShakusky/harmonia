@@ -18,6 +18,10 @@ main {
 }
 
 .selector {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
 	button {
 		position: relative;
 		border: 0;
@@ -53,6 +57,15 @@ main {
 		background: $blue;
 		transition: transform .3s, width .3s;
 	}
+	.mobileSelect {
+		display: none;
+		align-self: center;
+		font-family: $fontHead;
+		font-size: .8em;
+		color: $dark;
+		border-bottom: 2px solid $blue;
+		border-radius: 0;
+	}
 }
 
 .devider {
@@ -71,7 +84,7 @@ main {
 	justify-content: center;
 //	overflow: scroll;
 	font-family: $fontMain;
-	padding: 0 0 24px;
+	padding: 0 0 78px;
 	li {
 		display: inline-block;
 		margin: 21px 16px;
@@ -90,11 +103,146 @@ main {
 		background-color: $grey-light;
 		height: 59px;
 		margin: 0 16px;
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
 	}
 	.max,
 	.min { min-width: 300% }
 	.min {
 		text-align: right;
 		direction: rtl;
+	}
+}
+
+.examples {
+	display: flex;
+	justify-content: center;
+	padding: 0 100px;
+	
+	.picture {
+		width: 43%;
+		min-width: 570px;
+		position: relative;
+		text-align: right;
+		margin-right: 92px;
+		img {
+			margin: 80px 90px 0 0;
+			width: 250px;
+		}
+	}
+	.text {
+		max-width: 520px;
+		h1 {
+			font-family: $fontHead;
+			font-size: 2em;
+			color: $brown-light;
+			margin-bottom: 0.5em;
+		}
+		p {
+			font-family: $fontMain;
+			font-size: 1em;
+			line-height: 1.4;
+			color: $grey-dark;
+		}
+	}
+}
+
+@media (max-width: 1280px) {
+	.examples {
+		.picture {
+			width: 50%;
+			min-width: auto;
+		}
+		.text {
+			h1 { font-size: 1.7em; }
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+	.controls {
+		.devider,
+		.round { display: none; }
+	}
+}
+
+@media (max-width: 960px) {
+	main { position: relative; }
+	.controls {
+		padding: 0 24px 32px;
+		.devider,
+		.round { display: flex; }
+		.proportion { align-items: flex-start; }
+		.devider { align-items: center; }
+		.round { align-items: flex-end; }
+	}
+	.selector {
+		width: 96px;
+		.mobileSelect {
+			display: block;
+			align-self: auto;
+		}
+		.selector-wrap {
+//			height: 0;
+			position: absolute;
+			top: 33px;
+			overflow: hidden;
+			display: flex;
+			display: none;
+			flex-direction: column;
+			border: 2px solid $blue;
+			margin-top: -2px;
+			background-color: lighten($grey-light-plus, 50%);
+			transition: height .3s;
+		}
+		button {
+			margin: 0 !important;
+			padding: 6px;
+			border-radius: 0;
+			color: $grey-light-plus;
+			&:before { color: $dark; }
+			&.active {
+				background-color: lighten($grey-light-plus, 40%);
+			}
+		}
+		.marker { display: none; }
+	}
+	.numbers {
+		justify-content: space-between;
+		.min,.max {
+			display: flex;
+			flex-direction: column;
+			direction: ltr;
+			min-width: 200px;
+			padding: 0 24px;
+			li { margin: 21px 0; }
+		}
+		.min { text-align: left; }
+		.max { text-align: right; }
+	}
+	.examples {
+		width: 100%;
+		position: absolute;
+		left: 0;
+		top: 320px;
+		padding: 0 90px;
+		.picture { display: none; }
+		.text {
+			display: flex;
+			flex-direction: column;
+			h1 {
+				font-size: 1.5em;
+				text-align: center;
+				max-width: 300px;
+				align-self: center;
+			}
+			p {
+				font-size: .9em;
+				max-width: 380px;
+			}
+		}
 	}
 }
